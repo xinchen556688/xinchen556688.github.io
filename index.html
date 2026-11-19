@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AutoImageAnnotation — AI image annotation for galleries and archives</title>
+<meta name="description" content="Open notes on automatic image annotation: turning a single photograph into a museum wall label, a prose description, alt text, and a social caption — and why the four outputs are not interchangeable.">
+<link rel="canonical" href="https://xinchen556688.github.io/">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #666;
+    --rule: #e5e5e5;
+    --accent: #2c5f8a;
+    --paper: #fdfdfc;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 17px/1.65 Georgia, "Times New Roman", serif;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 72px 24px 96px;
+  }
+  h1 {
+    font-size: 2.1rem;
+    line-height: 1.2;
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+  }
+  .lede {
+    font-size: 1.15rem;
+    color: var(--muted);
+    margin: 0 0 40px;
+    font-style: italic;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 44px 0 14px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+  p { margin: 0 0 18px; }
+  ul { margin: 0 0 18px; padding-left: 22px; }
+  li { margin-bottom: 10px; }
+  code {
+    background: #f2f2ef;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 0.88em;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  a { color: var(--accent); }
+  a:hover { text-decoration: none; }
+  .outputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
+    margin: 24px 0 18px;
+  }
+  .outputs div {
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 16px 18px;
+    background: #fff;
+  }
+  .outputs strong { display: block; margin-bottom: 6px; font-size: 0.95rem; }
+  .outputs span { font-size: 0.9rem; color: var(--muted); line-height: 1.5; }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>AutoImageAnnotation</h1>
+<p class="lede">Notes on turning one photograph into four different kinds of text — and why you can't use the same paragraph for all of them.</p>
+
+<p>Museum cataloguers, archive staff, and accessibility teams keep running into the same problem: an image needs text, and the text needs to serve at least four audiences at once. A visitor reading a wall label in a gallery. A screen reader announcing an image to someone who can't see it. A search engine deciding what the image is about. A social feed where the caption has three seconds to earn attention.</p>
+
+<p>These are not the same text. Treating them as one produces something that half-works everywhere: too long for a caption, too thin for a label, too vague for alt text, too verbose for a search snippet.</p>
+
+<h2>The four outputs</h2>
+
+<div class="outputs">
+  <div>
+    <strong>Wall label</strong>
+    <span>Title, medium, date, and a short interpretive body — the gallery voice, written for someone standing in front of the object.</span>
+  </div>
+  <div>
+    <strong>Description</strong>
+    <span>A prose paragraph for catalogues and finding aids: what is depicted, how it's composed, what a careful viewer would notice.</span>
+  </div>
+  <div>
+    <strong>Alt text</strong>
+    <span>One or two sentences for screen readers. Functional, not poetic. Describes the information, not the atmosphere.</span>
+  </div>
+  <div>
+    <strong>Caption</strong>
+    <span>Platform-shaped. Short, direct, written to survive being skimmed in a feed.</span>
+  </div>
+</div>
+
+<h2>What the tool does</h2>
+
+<p><a href="https://www.autoimageannotation.com/">AutoImageAnnotation</a> takes an uploaded image and produces all four of the above. The wall label generator lives at <a href="https://www.autoimageannotation.com/services/wall-label">the museum wall label service</a>, which offers eight visual styles — from academic curator to children's gallery — because the register of a label changes entirely depending on which room it hangs in.</p>
+
+<p>The part that matters is not the generation. It's that each output is written against a different constraint. Alt text that describes brushwork is a failure. A wall label that reads like alt text is a worse one.</p>
+
+<h2>Why this page exists</h2>
+
+<p>This is a small static site documenting the reasoning behind the tool, kept separate from the application itself so the notes can be read without signing up for anything. If you work with image collections and have opinions about how labels should read, the notes here are the part worth arguing with.</p>
+
+<footer>
+  <p>Notes maintained alongside <a href="https://www.autoimageannotation.com/">autoimageannotation.com</a>. No tracking, no newsletter.</p>
+</footer>
+
+</main>
+</body>
+</html>
